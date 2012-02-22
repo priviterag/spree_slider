@@ -1,0 +1,17 @@
+h1. SpreeSlider
+
+Add a slider to the homepage of your spree site
+
+h2. Installation
+
+To install, add spree_slider to your @Gemfile@ and run `bundle install`:
+
+<pre>
+gem 'spree_slider'
+</pre>
+
+Copyright (c) 2012 "R.S.A.":http://www.rsaweb.com ,released under the New BSD License
+
+
+
+
