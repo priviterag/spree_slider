@@ -1,0 +1,26 @@
+<% if Spree::Slide.published.count > 0 %>
+  <!-- Define slider dimensions here -->
+  <style>
+    #slider { width: 680px; height: 317px; } 
+    .slider-wrapper { margin:0 auto 50px auto; }
+  </style>
+
+  <!-- AnythingSlider initialization -->
+  <script>
+  // DOM Ready
+  $(function(){
+	  $('#slider').anythingSlider();
+  });
+  </script>
+
+  <div class="slider-wrapper">
+    <ul id="slider">
+      <% Spree::Slide.published.each do |s| %>
+        <li><%= link_to image_tag(s.image.url, :title => '#' + s.name.to_url), s.link_url %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+
+
