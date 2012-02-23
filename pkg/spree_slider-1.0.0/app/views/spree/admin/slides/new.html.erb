@@ -1,9 +1,0 @@
-<%= render :partial => 'spree/admin/shared/configuration_menu' %>
-
-<h1>New Slide</h1>
-<%= render 'spree/shared/error_messages', :target => @slide %>
-
-<%= form_for [:admin, @slide] , :html => { :multipart => true } do |f| %>
-  <%= render :partial => 'form', :locals => { :f => f } %>
-  <p class="form-buttons" data-hook="buttons"><%= button t(:create) %></p>
-<% end %>
