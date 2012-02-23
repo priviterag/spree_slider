@@ -10,6 +10,32 @@ To install, add spree_slider to your @Gemfile@ and run `bundle install`:
 gem 'spree_slider'
 </pre>
 
+This extension uses two sliders plugins: Nivo and Anything slider
+Depending on which plugin you want to install, run the following command:
+
+h3. Anything slider
+
+<pre>
+rails generate spree_slider:install_anything
+</pre>
+
+h3. Nivo slider
+
+<pre>
+rails generate spree_slider:install_nivo
+</pre>
+
+The slider is almost unstyled. To customize you have to add your own css and
+eventually modify the partial copied into your app folder:
+app/views/shared/_slider.html.erb
+
+
+h3. Dynamic content
+
+To add dynamic content, go to the spree admin section, under 'Configuration'
+and find the Spree Slider menu. 
+
+
 Copyright (c) 2012 "R.S.A.":http://www.rsaweb.com released under the New BSD License
 
 

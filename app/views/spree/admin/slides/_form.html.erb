@@ -1,0 +1,21 @@
+<%= f.field_container :name do %>
+  <%= f.label :name, t(:name) %><br />
+  <%= f.text_field :name %>
+<% end %>
+<%= f.field_container :body do %>
+  <%= f.label :body, t(:body) %><br />
+  <%= f.text_area :body, {:cols => 60, :rows => 4, :class => 'fullwidth'} %>
+<% end %>
+<%= f.field_container :link_url do %>
+  <%= f.label :link_url, t(:link_url) %><br />
+  <%= f.text_field :link_url %>
+<% end %>
+<%= f.field_container :image do %>
+  <%= f.label :image, t(:image) %><br />
+  <%= f.file_field :image %>
+<% end %>
+<%= f.field_container :published do %>
+  <%= f.label :is_published, t(:published) %><br />
+  <%= f.check_box :published %>
+<% end %>
+

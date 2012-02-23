@@ -1,0 +1,41 @@
+<%= render :partial => 'admin/shared/configuration_menu' %>
+
+<h1><%= t(:slide) %></h1>
+
+<table>
+  <tr data-hook="name">
+    <th><%= t(:name) %></th>
+    <td>
+      <%= @slide.name %>
+    </td>
+  </tr>
+  <tr data-hook="body">
+    <th><%= t(:body) %></th>
+    <td>
+      <%= @slide.body %>
+    </td>
+  </tr>
+  <tr data-hook="link_url">
+    <th><%= t(:link_url) %></th>
+    <td>
+      <%= @slide.link_url %>
+    </td>
+  </tr>
+  <tr data-hook="published">
+    <th><%= t(:published) %></th>
+    <td>
+      <%= @slide.published %>
+    </td>
+  </tr>
+  <tr data-hook="image_file_name">
+    <th><%= t(:image_file_name) %></th>
+    <td>
+      <%= @slide.image_file_name %>
+    </td>
+  </tr>
+</table>
+
+<p>
+  <%= link_to_edit @slide, :class => 'edit_slide' %> <%= t(:or) %>
+  <%= link_to t(:back), collection_url %>
+</p>

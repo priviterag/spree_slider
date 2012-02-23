@@ -1,6 +1,6 @@
 class CreateSlides < ActiveRecord::Migration
   def change
-    create_table :slides do |t|
+    create_table :spree_slides do |t|
       t.string :name
       t.text :body
       t.string :link_url
