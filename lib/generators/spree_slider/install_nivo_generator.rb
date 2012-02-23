@@ -3,7 +3,7 @@ module SpreeSlider
     source_root File.expand_path("../templates", __FILE__)    
     def install
       #copy slider partial
-      copy_file "nivo_slider.html.erb", "app/views/shared/_slider.html.erb"      
+      copy_file "nivo_slider.html.erb", "app/views/spree/shared/_slider.html.erb"      
       
       #add javascripts
       append_file "app/assets/javascripts/store/all.js", "//= require jquery.nivo.slider.pack.js\n" 
