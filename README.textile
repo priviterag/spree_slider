@@ -30,7 +30,7 @@ eventually modify the partial copied into your app folder:
 app/views/shared/_slider.html.erb
 
 
-h3. Dynamic content
+h2. Dynamic content management
 
 To add dynamic content, go to the spree admin section, under 'Configuration'
 and find the Spree Slider menu. 
