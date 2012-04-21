@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     spree_slider (1.0.1)
-      spree_core (~> 1.1.0.beta)
+      spree_core (~> 1.1.0.rc1)
 
 GEM
   remote: http://rubygems.org/
@@ -23,8 +23,8 @@ GEM
     active_utils (1.0.3)
       activesupport (>= 2.3.11)
       i18n
-    activemerchant (1.20.1)
-      active_utils (>= 1.0.1)
+    activemerchant (1.20.4)
+      active_utils (>= 1.0.2)
       activesupport (>= 2.3.11)
       braintree (>= 2.0.0)
       builder (>= 2.0.0)
@@ -135,8 +135,8 @@ GEM
       ruby-debug-base (~> 0.10.4.0)
     ruby-debug-base (0.10.4)
       linecache (>= 0.3)
-    spree_core (1.1.0.rc1)
-      activemerchant (= 1.20.1)
+    spree_core (1.1.0.rc2)
+      activemerchant (= 1.20.4)
       acts_as_list (= 0.1.4)
       aws-sdk (~> 1.3.4)
       deface (>= 0.8.0)
@@ -145,7 +145,7 @@ GEM
       jquery-rails (~> 2.0.0)
       kaminari (>= 0.13.0)
       nested_set (= 1.7.0)
-      paperclip (~> 2.7.0)
+      paperclip (~> 2.7)
       rails (>= 3.2.2, <= 3.2.3)
       ransack (~> 0.6.0)
       state_machine (= 1.1.2)
