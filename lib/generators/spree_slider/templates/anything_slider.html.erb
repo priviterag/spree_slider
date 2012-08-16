@@ -15,7 +15,7 @@
 
   <div class="slider-wrapper">
     <ul id="slider">
-      <% Spree::Slide.published.each do |s| %>
+      <% Spree::Slide.published.order('position ASC').each do |s| %>
         <li><%= link_to image_tag(s.image.url, :title => '#' + s.name.to_url), s.link_url %></li>
       <% end %>
     </ul>

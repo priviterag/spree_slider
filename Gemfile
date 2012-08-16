@@ -1,13 +1,20 @@
 source 'http://rubygems.org'
 
 group :test do
-  gem 'ffaker'
+  gem 'rspec-rails', '~> 2.11.0'
+  gem 'factory_girl', '~> 2.6.4'
+  gem 'factory_girl_rails', '~> 1.7'
+  gem 'faker'
+  gem 'shoulda-matchers'
+  gem 'guard-rspec'
+  gem 'sqlite3'
+
+  if RUBY_PLATFORM.downcase.include? "darwin"
+    gem 'rb-fsevent'
+    gem 'growl'
+  end
 end
 
-if RUBY_VERSION < "1.9"
-  gem "ruby-debug"
-else
-  gem "ruby-debug19"
-end
+gem 'spree', '~> 1.1.3'
 
 gemspec
