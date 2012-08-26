@@ -1,0 +1,4 @@
+<!-- insert_before '[data-hook="homepage_products"]' -->
+<% content_for :spree_slider do %>
+  <%= render 'spree/shared/slider' %>
+<% end %>

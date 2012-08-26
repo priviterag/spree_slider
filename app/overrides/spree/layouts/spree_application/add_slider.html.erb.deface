@@ -1,0 +1,4 @@
+<!-- insert_after '#header[data-hook]' -->
+<div id='spree-slider' data-hook>
+  <%= yield :spree_slider %>
+</div>
