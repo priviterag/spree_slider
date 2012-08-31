@@ -1,0 +1,15 @@
+<% if Spree::Slide.published.count > 0 %>
+  <section id="slideshow">
+    <ul class="slider regular">
+      <% Spree::Slide.published.order('position ASC').each do |s| %>
+        <li>
+          <h1><%= s.name %></h1>
+          <%= link_to image_tag(s.image.url, :title => s.name.to_url), s.link_url %>
+        </li>
+      <% end %>
+    </ul>
+    
+    <a title="<%= t(:previous) %>" class="slider-prev"><%= t(:previous)%></a>
+  	<a title="<%= t(:next) %>" class="slider-next"><%= t(:next) %></a>
+  </section>
+<% end %>
