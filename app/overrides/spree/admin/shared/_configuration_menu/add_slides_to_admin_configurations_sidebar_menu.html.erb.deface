@@ -1,2 +1,2 @@
 <!-- insert_bottom "[data-hook='admin_configurations_sidebar_menu']" -->
-<%= configurations_sidebar_menu_item 'Spree Slider', admin_slides_path %>
+<%= configurations_sidebar_menu_item t('spree_slider.config_name'), admin_slides_path %>

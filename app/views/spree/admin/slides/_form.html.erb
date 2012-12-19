@@ -1,3 +1,7 @@
+<%= f.field_container :product_id do %>
+  <%= label_tag :product_id, t(:product) %><br />
+  <%= product_picker_field 'slide[product_id]', f.object.product_id.to_s %>
+<% end %>
 <%= f.field_container :name do %>
   <%= f.label :name, t(:name) %><br />
   <%= f.text_field :name %>

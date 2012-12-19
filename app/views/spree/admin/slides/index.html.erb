@@ -3,19 +3,19 @@
 <div class="toolbar" data-hook="toolbar">
   <ul class="actions">
     <li>
-      <p><%= button_link_to 'New Slide', new_object_url, :icon => 'add', :id => 'admin_new_slide_link' %></p>
+      <p><%= button_link_to t('spree_slider.new_slide'), new_object_url, :icon => 'add', :id => 'admin_new_slide_link' %></p>
     </li>
   </ul>
   <br class="clear" />
 </div>
 
-<h1>Slides</h1>
+<h1><%= t('spree_slider.title') %></h1>
 
 <table class="index" id="listing_slides" data-hook>
   <thead>
     <tr data-hook="admin_slides_index_headers">
-      <th>Name</th>
-      <th data-hook="admin_slides_index_header_position">Position</th>
+      <th><%= t(:name) %></th>
+      <th data-hook="admin_slides_index_header_position"><%= t(:position) %></th>
       <th data-hook="admin_slides_index_header_actions"></th>
     </tr>
   </thead>
@@ -32,6 +32,3 @@
     <% end %>
   </tbody>
 </table>
-
-
-

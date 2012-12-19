@@ -1,3 +1,21 @@
 es:
-  next: "Próximo"
-  previous: "Previo"
+  next: "Siguiente"
+  previous: "Anterior"
+  name: "Nombre"
+  body: "Cuerpo"
+  link_url: "URL de enlace"
+  image: "Imagen"
+  image_file_name: "Nombre de la imagen"
+  published: "Publicado"
+  position: "Posición"
+
+  activerecord:
+    models:
+      spree/slide: "Diapositiva"
+
+  spree_slider:
+    config_name: "Diapositivas Spree"
+    config_description: "Configura las diapositivas de portada"
+    title: "Diapositivas"
+    new_slide: "Nueva Diapositiva"
+    editing_slide: "Editando Diapositiva"

@@ -1,3 +1,21 @@
 en:
   next: "Next"
   previous: "Previous"
+  name: "Name"
+  body: "Body"
+  link_url: "Link URL"
+  image: "Image"
+  image_file_name: "Image file name"
+  published: "Published"
+  position: "Position"
+
+  activerecord:
+    models:
+      spree/slide: "Slide"
+
+  spree_slider:
+    config_name: "Spree Slider"
+    config_description: "Manage Spree Slider contents"
+    title: "Slides"
+    new_slide: "New Slide"
+    editing_slide: "Editing Slide"

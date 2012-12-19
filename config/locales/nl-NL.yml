@@ -1,3 +1,21 @@
 nl-NL:
   next: "Volgende"
   previous: "Vorige"
+  name: "Naam"
+  body: "Lichaam"
+  link_url: "Link URL"
+  image: "Beeld"
+  image_file_name: "Bestandsnaam"
+  published: "Gepubliceerd"
+  position: "Positie"
+
+  activerecord:
+    models:
+      spree/slide: "Slide"
+
+  spree_slider:
+    config_name: "Spree Slider"
+    config_description: "Beheer Spree Slider inhoud"
+    title: "Slides"
+    new_slide: "Nieuwe Slide"
+    editing_slide: "Bewerken Van Slide"
