@@ -8,6 +8,8 @@ es:
   image_file_name: "Nombre de la imagen"
   published: "Publicado"
   position: "Posición"
+  y: "Sí"
+  n: "No"
 
   activerecord:
     models:

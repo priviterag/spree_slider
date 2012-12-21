@@ -8,6 +8,8 @@ nl-NL:
   image_file_name: "Bestandsnaam"
   published: "Gepubliceerd"
   position: "Positie"
+  y: "Ja"
+  n: "Geen"
 
   activerecord:
     models:
