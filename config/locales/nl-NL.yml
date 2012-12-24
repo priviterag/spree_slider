@@ -21,3 +21,6 @@ nl-NL:
     title: "Slides"
     new_slide: "Nieuwe Slide"
     editing_slide: "Bewerken Van Slide"
+    placeholder_name: "Laat leeg om product naam te gebruiken"
+    placeholder_link_url: "Laat leeg om product url gebruiken"
+    image_tip: "Default eerste product afbeelding"

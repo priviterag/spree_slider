@@ -1,7 +1,7 @@
 <% if Spree::Slide.published.count > 0 %>
   <!-- Define slider dimensions here -->
   <style>
-    #slider { width: 680px; height: 317px; } 
+    #slider { width: 680px; height: 317px; }
     .slider-wrapper { margin:0 auto 50px auto; }
   </style>
 
@@ -16,11 +16,8 @@
   <div class="slider-wrapper">
     <ul id="slider">
       <% Spree::Slide.published.order('position ASC').each do |s| %>
-        <li><%= link_to image_tag(s.image.url, :title => '#' + s.name.to_url), s.link_url %></li>
+        <li><%= link_to image_tag(s.slide_image.url, :title => '#' + s.slide_name.to_url), url_for(s.slide_link) %></li>
       <% end %>
     </ul>
   </div>
 <% end %>
-
-
-
