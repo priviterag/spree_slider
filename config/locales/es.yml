@@ -8,6 +8,8 @@ es:
   image_file_name: "Nombre de la imagen"
   published: "Publicado"
   position: "Posición"
+  y: "Sí"
+  n: "No"
 
   activerecord:
     models:
@@ -19,3 +21,6 @@ es:
     title: "Diapositivas"
     new_slide: "Nueva Diapositiva"
     editing_slide: "Editando Diapositiva"
+    placeholder_name: "En blanco para usar el del producto"
+    placeholder_link_url: "En blanco para usar la del producto"
+    image_tip: "Si no selecciona ninguna imagen, se tomará la primera del producto"

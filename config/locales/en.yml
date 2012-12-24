@@ -8,6 +8,8 @@ en:
   image_file_name: "Image file name"
   published: "Published"
   position: "Position"
+  y: "Yes"
+  n: "No"
 
   activerecord:
     models:
@@ -19,3 +21,6 @@ en:
     title: "Slides"
     new_slide: "New Slide"
     editing_slide: "Editing Slide"
+    placeholder_name: "Leave blank to use product name"
+    placeholder_link_url: "Leave blank to use product url"
+    image_tip: "Default first product image"

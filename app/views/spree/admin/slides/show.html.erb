@@ -3,6 +3,12 @@
 <h1><%= t(:slide) %></h1>
 
 <table>
+  <tr data-hook="product_id">
+    <th><%= t(:product) %></th>
+    <td>
+      <%= @slide.product.name unless @slide.product_id.blank? %>
+    </td>
+  </tr>
   <tr data-hook="name">
     <th><%= t(:name) %></th>
     <td>
@@ -24,7 +30,7 @@
   <tr data-hook="published">
     <th><%= t(:published) %></th>
     <td>
-      <%= @slide.published %>
+      <%= @slide.published ? t(:y) : t(:n) %>
     </td>
   </tr>
   <tr data-hook="image_file_name">
