@@ -6,8 +6,6 @@ class Spree::Slide < ActiveRecord::Base
 
   scope :published, where(:published => true)
 
-  attr_accessible :name, :body, :link_url, :published, :image, :position, :product_id
-
   belongs_to :product
 
   def initialize(attrs = nil)
