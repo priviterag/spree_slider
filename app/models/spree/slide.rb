@@ -4,7 +4,7 @@ class Spree::Slide < ActiveRecord::Base
   include Spree::Core::S3Support
   supports_s3 :image
 
-  scope :published, where(:published => true)
+  scope :published, -> { where(published: true).order('position ASC') }
 
   belongs_to :product
 
