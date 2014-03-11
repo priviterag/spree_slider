@@ -1,9 +1,7 @@
 class Spree::Slide < ActiveRecord::Base
 
   has_attached_file :image
-  include Spree::Core::S3Support
-  supports_s3 :image
-
+  validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
   scope :published, -> { where(published: true).order('position ASC') }
 
   belongs_to :product
