@@ -6,9 +6,9 @@ module SpreeSlider
       copy_file "anything_slider.html.erb", "app/views/spree/shared/_slider.html.erb"      
       
       #add javascripts
-      append_file "app/assets/javascripts/store/all.js", "//= require js/jquery.anythingslider\n" 
-      append_file "app/assets/javascripts/store/all.js", "//= require js/jquery.anythingslider.fx\n" 
-      append_file "app/assets/javascripts/store/all.js", "//= require js/jquery.anythingslider.video\n" 
+      append_file "vendor/assets/javascripts/spree/frontend/all.js", "//= require js/jquery.anythingslider\n"
+      append_file "vendor/assets/javascripts/spree/frontend/all.js", "//= require js/jquery.anythingslider.fx\n"
+      append_file "vendor/assets/javascripts/spree/frontend/all.js", "//= require js/jquery.anythingslider.video\n"
 
       #add stylesheets
       inject_into_file "app/assets/stylesheets/store/all.css", " *= require css/anythingslider\n", :before => /\*\//, :verbose => true

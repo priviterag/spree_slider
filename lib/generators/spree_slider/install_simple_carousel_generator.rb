@@ -6,8 +6,8 @@ module SpreeSlider
       copy_file "simple_carousel_slider.html.erb", "app/views/spree/shared/_slider.html.erb"      
       
       #add javascripts
-      append_file "app/assets/javascripts/store/all.js", "//= require simple.carousel\n" 
-      append_file "app/assets/javascripts/store/all.js", "//= require simple.carousel.slider\n" 
+      append_file "vendor/assets/javascripts/spree/frontend/all.js", "//= require simple.carousel\n"
+      append_file "vendor/assets/javascripts/spree/frontend/all.js", "//= require simple.carousel.slider\n"
       
       
       #copy migrations
