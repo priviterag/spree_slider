@@ -11,7 +11,7 @@ module SpreeSlider
       append_file "vendor/assets/javascripts/spree/frontend/all.js", "//= require js/jquery.anythingslider.video\n"
 
       #add stylesheets
-      inject_into_file "app/assets/stylesheets/store/all.css", " *= require css/anythingslider\n", :before => /\*\//, :verbose => true
+      inject_into_file "vendor/assets/stylesheets/spree/frontend/all.css", " *= require css/anythingslider\n", :before => /\*\//, :verbose => true
 
       #copy migrations
       run 'bundle exec rake railties:install:migrations FROM=spree_slider'
