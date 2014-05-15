@@ -10,6 +10,12 @@ To install, add spree_slider to your @Gemfile@ and run `bundle install`:
 gem 'spree_slider', github: 'priviterag/spree_slider'
 </pre>
 
+Then install and run the migrations to add the tables:
+<pre>
+bundle exec rake railties:install:migrations
+bundle exec rake db:migrate
+</pre>
+
 This extension comes with three sliders plugins: Nivo, SimpleCarousel and Anything slider
 Depending on which plugin you want to install, run the following command:
 
