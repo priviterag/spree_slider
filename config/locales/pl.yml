@@ -16,6 +16,9 @@ pl:
     models:
       spree/slide: "Slajd"
 
+  spree:
+    slides: "Slajdy"
+
   spree_slider:
     config_name: "Spree Slider"
     config_description: "Zarządzaj zawartości Spree Slidera"
