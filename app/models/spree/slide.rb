@@ -4,7 +4,7 @@ class Spree::Slide < ActiveRecord::Base
   validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
   scope :published, -> { where(published: true).order('position ASC') }
 
-  belongs_to :product
+  belongs_to :product, touch: true
 
   def initialize(attrs = nil)
     attrs ||= {:published => true}
