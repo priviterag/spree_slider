@@ -2,12 +2,12 @@ class Spree::Slide < ActiveRecord::Base
 
   has_attached_file :image
   validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
-  scope :published, -> { where(published: true).order('position ASC') }
+  scope :published, -> { where("published_at <= ?", Time.now).order('position ASC') }
 
   belongs_to :product, touch: true
 
   def initialize(attrs = nil)
-    attrs ||= {:published => true}
+    attrs ||= {:published_at => Time.now}
     super
   end
 
