@@ -8,25 +8,26 @@
 
 <h1><%= t('spree_slider.title') %></h1>
 
-<table class="index" id="listing_slides" data-hook>
+<table class="index sortable" id="listing_slides" data-hook data-sortable-link="<%= update_positions_admin_slides_url %>" >
   <thead>
   <tr data-hook="admin_slides_index_headers">
-    <th><%= Spree.t(:image) %></th>
+    <th colspan="2"><%= Spree.t(:image) %></th>
     <th><%= Spree.t(:name) %></th>
     <th><%= Spree.t(:product) %></th>
     <th><%= Spree.t(:published) %></th>
-    <th data-hook="admin_slides_index_header_position"><%= Spree.t(:position) %></th>
     <th data-hook="admin_slides_index_header_actions" class="actions"></th>
   </tr>
   </thead>
   <tbody>
   <% @slides.each do |slide|%>
-    <tr id="<%= dom_id slide %>" data-hook="admin_slides_index_rows">
-      <td class="align-center"><%= image_tag slide.image, style: 'width: 120px; height: auto;' %></td>
+    <tr id="<%= spree_dom_id slide %>" data-hook="admin_slides_index_rows">
+      <td class="no-border">
+        <span class="handle"></span>
+      </td>
+      <td class="align-center"><%= image_tag slide.slide_image, style: 'width: 120px; height: auto;' %></td>
       <td><%= link_to slide.name, object_url(slide) %></td>
       <td><%= link_to slide.product.name, object_url(slide) unless slide.product_id.blank? %></td>
       <td><%= slide.published ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
-      <td data-hook="admin_slides_index_position"><%= slide.position %></td>
       <td data-hook="admin_slides_index_row_actions" class="actions">
         <%= link_to_edit slide, :no_text => true, :class => 'edit' %>
         &nbsp;
