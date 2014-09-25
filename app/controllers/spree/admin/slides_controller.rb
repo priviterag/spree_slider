@@ -2,7 +2,7 @@ class Spree::Admin::SlidesController < Spree::Admin::ResourceController
   respond_to :html
 
   def index
-    @slides = Spree::Slide.all
+    @slides = Spree::Slide.order(:position)
   end
 
   private

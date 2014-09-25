@@ -16,6 +16,9 @@
 <% end %>
 <%= f.field_container :image do %>
   <%= f.label :image, t(:image) %> <i>(<%= t('spree_slider.image_tip') %>)</i><br />
+  <% if f.object.image? %>
+    <p><%= image_tag f.object.image, style: 'width: 120px; height: auto;' %></p>
+  <% end %>
   <%= f.file_field :image %>
 <% end %>
 <%= f.field_container :published do %>
@@ -26,3 +29,4 @@
   <%= f.label :position, t(:position) %>
   <%= f.number_field :position %>
 <% end %>
+
