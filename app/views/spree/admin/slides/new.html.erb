@@ -1,9 +1,25 @@
 <%= render :partial => 'spree/admin/shared/configuration_menu' %>
 
-<h1><%= t('spree_slider.new_slide') %></h1>
+<% content_for :page_title do %>
+  <%= t('spree_slider.new_slide') %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <li>
+    <%= button_link_to t('spree_slider.back_to_slides'), spree.admin_slides_path, :icon => 'arrow-left' %>
+  </li>
+<% end %>
+
 <%= render 'spree/shared/error_messages', :target => @slide %>
 
 <%= form_for [:admin, @slide] , :html => { :multipart => true } do |f| %>
-  <%= render :partial => 'form', :locals => { :f => f } %>
-  <p class="form-buttons" data-hook="buttons"><%= button t(:create) %></p>
+  <fieldset class="no-border-top">
+    <%= render :partial => 'form', :locals => { :f => f } %>
+
+    <div class="clear"></div>
+
+    <div data-hook="admin_shipping_method_new_form_buttons">
+      <%= render :partial => 'spree/admin/shared/new_resource_links' %>
+    </div>
+  </fieldset>
 <% end %>
