@@ -21,6 +21,7 @@ en:
     title: "Slides"
     new_slide: "New Slide"
     editing_slide: "Editing Slide"
+    back_to_slides: "Back to Slides"
     placeholder_name: "Leave blank to use product name"
     placeholder_link_url: "Leave blank to use product url"
     image_tip: "Default first product image"

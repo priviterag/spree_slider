@@ -2,11 +2,13 @@
 
 <% content_for :page_actions do %>
   <li>
-    <%= button_link_to t('spree_slider.new_slide'), new_object_url, :icon => 'icon-plus', :id => 'admin_new_slide_link' %>
+    <%= button_link_to t('spree_slider.new_slide'), new_object_url, :icon => 'plus', :id => 'admin_new_slide_link' %>
   </li>
 <% end %>
 
-<h1><%= t('spree_slider.title') %></h1>
+<% content_for :page_title do %>
+  <%= t('spree_slider.title') %>
+<% end %>
 
 <table class="index sortable" id="listing_slides" data-hook data-sortable-link="<%= update_positions_admin_slides_url %>" >
   <thead>
@@ -25,9 +27,9 @@
         <span class="handle"></span>
       </td>
       <td class="align-center"><%= image_tag slide.slide_image, style: 'width: 120px; height: auto;' %></td>
-      <td><%= link_to slide.name, object_url(slide) %></td>
-      <td><%= link_to slide.product.name, object_url(slide) unless slide.product_id.blank? %></td>
-      <td><%= slide.published ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
+      <td class="align-center"><%= link_to slide.name, object_url(slide) %></td>
+      <td class="align-center"><%= link_to slide.product.name, object_url(slide) unless slide.product_id.blank? %></td>
+      <td class="align-center"><%= slide.published ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
       <td data-hook="admin_slides_index_row_actions" class="actions">
         <%= link_to_edit slide, :no_text => true, :class => 'edit' %>
         &nbsp;
