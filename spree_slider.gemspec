@@ -2,7 +2,7 @@
 Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.name        = 'spree_slider'
-  s.version     = '1.2.0'
+  s.version     = '1.3.0'
   s.summary     = 'Spree Slider extension'
   s.description = 'Adds a slider to the homepage'
   s.required_ruby_version = '>= 1.8.7'
@@ -16,5 +16,5 @@ Gem::Specification.new do |s|
   s.require_path = 'lib'
   s.requirements << 'none'
 
-  s.add_dependency 'spree_core', '>= 2.2'
+  s.add_dependency 'spree_core', '~> 2.3'
 end
