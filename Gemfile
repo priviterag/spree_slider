@@ -15,6 +15,4 @@ group :test do
   end
 end
 
-gem 'spree', '~> 2.2'
-
 gemspec

@@ -2,3 +2,4 @@
 "1.1.x" => { :ref => "4f2c9e74e47e26b4f1fe67a59288d2cd45ccd13b" }
 "1.2.x" => { :ref => "4f2c9e74e47e26b4f1fe67a59288d2cd45ccd13b" }
 "2.0.x" => { :branch => "master" }
+"2.3.x" => { :branch => "2-3-stable" }
