@@ -22,8 +22,8 @@
   <%= f.file_field :image %>
 <% end %>
 <%= f.field_container :published do %>
-  <%= f.label :is_published, t(:published) %><br />
-  <%= f.check_box :published %>
+  <%= f.label :is_published, t(:published_at) %><br />
+  <%= f.text_field :published_at, :value => datepicker_field_value(@slide.published_at), :class => 'datepicker' %>
 <% end %>
 <%= f.field_container :position do %>
   <%= f.label :position, t(:position) %>
