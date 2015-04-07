@@ -66,6 +66,6 @@ Just add your own to your asset pipeline, and update your theme templates with a
 ## Dynamic content management
 
 To add dynamic content, go to the spree admin section, under 'Configuration'
-and find the Spree Slider menu. 
+and find the Spree Slider menu.
 
 Copyright (c) 2012 "R.S.A.":http://www.rsaweb.com released under the New BSD License
