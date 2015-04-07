@@ -1,4 +1,5 @@
-"1.0.x" => { :ref => '2c31ead09bf6a62e7a0700a5d831c7933d63edd5' }
+"1.0.x" => { :ref => "2c31ead09bf6a62e7a0700a5d831c7933d63edd5" }
 "1.1.x" => { :ref => "4f2c9e74e47e26b4f1fe67a59288d2cd45ccd13b" }
 "1.2.x" => { :ref => "4f2c9e74e47e26b4f1fe67a59288d2cd45ccd13b" }
-"2.0.x" => { :branch => "master" }
+"2.0.x" => { :ref => "4d77dec367c1e8320fe0151aa0100814163c8217" }
+"3.0.x" => { :branch => "master" }

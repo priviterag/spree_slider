@@ -6,36 +6,36 @@ h2. Installation
 
 To install, add spree_slider to your @Gemfile@ and run `bundle install`:
 
-<pre>
-gem 'spree_slider', github: 'priviterag/spree_slider'
-</pre>
+```
+gem 'spree_slider', github: 'spree-contrib/spree_slider'
+```
 
 Then install and run the migrations to add the tables:
-<pre>
+```
 bundle exec rake railties:install:migrations
 bundle exec rake db:migrate
-</pre>
+```
 
 This extension comes with three sliders plugins: Nivo, SimpleCarousel and Anything slider
 Depending on which plugin you want to install, run the following command:
 
 h3. Anything slider
 
-<pre>
+```
 rails generate spree_slider:install_anything
-</pre>
+```
 
 h3. SimpleCarousel slider
 
-<pre>
+```
 rails generate spree_slider:install_simple_carousel
-</pre>
+```
 
 h3. Nivo slider
 
-<pre>
+```
 rails generate spree_slider:install_nivo
-</pre>
+```
 
 The slider is almost unstyled. To customize you have to add your own css and
 eventually modify the partial copied into your app folder:
@@ -46,7 +46,7 @@ h3. Or Roll your own!
 You may want to theme your site your own way.  If you want to include your own library such Bootstrap or Foundation.
 Just add your own to your asset pipeline, and update your theme templates with appropriate markup.  Example:
 
-<pre>
+```erb
 <% if Spree::Slide.published.count > 0 %>
   <section id="slideshow">
     <ul class="slide">
@@ -61,7 +61,7 @@ Just add your own to your asset pipeline, and update your theme templates with a
     <a title="<%= t(:next) %>" class="slider-next"><%= t(:next) %></a>
   </section>
 <% end %>
-</pre>
+```
 
 h2. Dynamic content management
 

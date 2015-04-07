@@ -1,5 +1,0 @@
-<!-- insert_bottom "[data-hook='admin_configurations_menu']" -->
-<tr>
-  <td><%= link_to t('spree_slider.config_name'), admin_slides_path %></td>
-  <td><%= t('spree_slider.config_description') %></td>
-</tr>

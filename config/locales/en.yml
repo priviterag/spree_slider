@@ -5,6 +5,7 @@ en:
   body: "Body"
   link_url: "Link URL"
   image: "Image"
+  preview: "Preview"
   image_file_name: "Image file name"
   published: "Published"
   position: "Position"
