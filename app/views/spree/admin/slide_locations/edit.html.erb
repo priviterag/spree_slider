@@ -1,0 +1,19 @@
+<% content_for :page_title do %>
+  <%= t('spree_slider_locations.editing_location') %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <%= button_link_to t('spree_slider_locations.back_to_locations'), spree.admin_slide_locations_path, :icon => 'arrow-left' %>
+<% end %>
+
+<%= render 'spree/shared/error_messages', :target => @slide_location %>
+
+<%= form_for [:admin, @slide_location] do |f| %>
+  <fieldset class="no-border-top">
+    <%= render :partial => 'form', :locals => { :f => f } %>
+
+    <div data-hook="admin_slider_locations_method_edit_form_buttons">
+      <%= render :partial => 'spree/admin/shared/edit_resource_links' %>
+    </div>
+  </fieldset>
+<% end %>

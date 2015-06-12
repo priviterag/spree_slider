@@ -1,0 +1,29 @@
+<% content_for :page_actions do %>
+  <%= button_link_to t('spree_slider_locations.new_location'), new_object_url, { :class => 'btn-success', :icon => 'add', :id => 'admin_new_slide_link' } %>
+<% end %>
+
+<% content_for :page_title do %>
+  <%= t('spree_slider_location.title') %>
+<% end %>
+
+<table class="table" id="listing_slide_locations" data-hook >
+  <thead>
+    <tr data-hook="admin_slides_index_headers">
+      <th><%= Spree.t(:name) %></th>
+      <th data-hook="admin_slides_index_header_actions" class="actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @slide_locations.each do |location|%>
+    <tr>
+      <td class="align-center"><%= link_to location.name, object_url(location) %></td>
+      <td data-hook="admin_slide_locations_index_row_actions" class="actions">
+        <%= link_to_edit location, :no_text => true, :class => 'edit' %>
+        &nbsp;
+        <%= link_to_delete location, :no_text => true %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>
+

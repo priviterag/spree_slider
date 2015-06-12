@@ -36,6 +36,10 @@
     <% end %>
   </div>
 
+  <div class="col-md-6">
+    <%= render 'spree/admin/slides/edit_slider_locations', f: f %>
+  </div>
+
   <div class="col-md-12">
     <%= f.field_container :body do %>
       <%= f.label :body, t(:body) %><br>
