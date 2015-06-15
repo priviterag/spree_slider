@@ -16,35 +16,18 @@ bundle exec rake railties:install:migrations
 bundle exec rake db:migrate
 ```
 
-This extension comes with three sliders plugins: Nivo, SimpleCarousel and Anything slider
-Depending on which plugin you want to install, run the following command:
+### Using the slider
 
-### Anything slider
+Spree 3 uses the bootstrap framework and a default slider template is available for bootstrap 3
+`spree/shared/_slider.html.erb`.
 
-```
-rails generate spree_slider:install_anything
-```
+Example usage:
 
-### SimpleCarousel slider
-
-```
-rails generate spree_slider:install_simple_carousel
+```erb
+  <%= render partial: 'spree/shared/slider', locals: { slider: Spree::Slide.published, cid: 'home', interval: false } %>
 ```
 
-### Nivo slider
-
-```
-rails generate spree_slider:install_nivo
-```
-
-The slider is almost unstyled. To customize you have to add your own css and
-eventually modify the partial copied into your app folder:
-app/views/spree/shared/_slider.html.erb
-
-### Or Roll your own!
-
-You may want to theme your site your own way.  If you want to include your own library such Bootstrap or Foundation.
-Just add your own to your asset pipeline, and update your theme templates with appropriate markup.  Example:
+If you desire to have a customized carousel template you can specify your own like so:
 
 ```erb
 <% if Spree::Slide.published.count > 0 %>
@@ -53,7 +36,7 @@ Just add your own to your asset pipeline, and update your theme templates with a
       <% Spree::Slide.published.order('position ASC').each do |s| %>
         <li>
           <h1><%= s.slide_name %></h1>
-          <%= link_to image_tag(s.slide_image.url), url_for(s.slide_link) %>
+          <%= link_to image_tag(s.slide_image.url), url_for(s.link_url) %>
         </li>
       <% end %>
     </ul>
@@ -66,6 +49,13 @@ Just add your own to your asset pipeline, and update your theme templates with a
 ## Dynamic content management
 
 To add dynamic content, go to the spree admin section, under 'Configuration'
-and find the Spree Slider menu.
+and find the Spree Slider & Spree Slider Locations menu.
 
-Copyright (c) 2012 "R.S.A.":http://www.rsaweb.com released under the New BSD License
+You can create new slides and new locations. Then to fetch & render the slider for a particular location you can do the following:
+
+```erb
+  <% slides = Spree::Slide.published.location("home") %>
+  <%= render partial: 'spree/shared/slider', locals: { slider: slides } %>
+```
+
+Copyright (c) 2012 [R.S.A.](:http://www.rsaweb.com) released under the New BSD License

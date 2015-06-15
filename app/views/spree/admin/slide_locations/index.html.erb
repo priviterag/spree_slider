@@ -16,7 +16,7 @@
   <tbody>
   <% @slide_locations.each do |location|%>
     <tr>
-      <td class="align-center"><%= link_to location.name, object_url(location) %></td>
+      <td class="align-center"><%= location.name %></td>
       <td data-hook="admin_slide_locations_index_row_actions" class="actions">
         <%= link_to_edit location, :no_text => true, :class => 'edit' %>
         &nbsp;

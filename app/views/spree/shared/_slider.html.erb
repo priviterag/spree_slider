@@ -1,0 +1,41 @@
+<% if slider.size > 0 %>
+
+  <%# generate a random number for the carousel id - in case you want multiple per page %>
+  <% cid ||= Random.rand(1000) %>
+
+  <div id="carousel-slider-<%= cid %>" class="carousel slide" data-ride="carousel" <%= (defined? interval) != nil ? "data-interval=#{interval.to_s}" : "" %>>
+    <%# Indicators %>
+    <ol class="carousel-indicators">
+      <% slider.each_with_index do |slide, index| %>
+        <li data-target="#carousel-prod-<%= cid %>" data-slide-to="<%= index %>" class="<%= index == 0 ? 'active' : '' %>"></li>
+      <% end %>
+    </ol>
+
+    <%# Wrapper for slider %>
+    <div class="carousel-inner">
+      <% slider.each_with_index do |slide, index| %>
+        <div class="item <%= index == 0 ? 'active' : '' %>">
+          <%= link_to image_tag(slide.slide_image.url, alt: slide.name), url_for(slide.link_url) %>
+          <div class="carousel-caption">
+            <h3><%= slide.name %></h3>
+            <% if slide.body.nil? || slide.body.empty? %>
+            <p><%= slide.body %><p>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <%# Controls %>
+    <a class="left carousel-control" href="#carousel-slider-<%= cid %>" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only"><%= t(:previous) %></span>
+    </a>
+    <a class="right carousel-control" href="#carousel-slider-<%= cid %>" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only"><%= t(:next) %></span>
+    </a>
+
+  </div>
+
+<% end %>
