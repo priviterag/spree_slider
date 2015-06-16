@@ -58,4 +58,4 @@ You can create new slides and new locations. Then to fetch & render the slider f
   <%= render partial: 'spree/shared/slider', locals: { slider: slides } %>
 ```
 
-Copyright (c) 2012 [R.S.A.](:http://www.rsaweb.com) released under the New BSD License
+Copyright (c) 2012 [R.S.A.](http://www.rsaweb.com) released under the New BSD License
