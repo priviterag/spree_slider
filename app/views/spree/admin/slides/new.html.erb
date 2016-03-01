@@ -3,19 +3,19 @@
 <% end %>
 
 <% content_for :page_actions do %>
-  <%= button_link_to t('spree_slider.back_to_slides'), spree.admin_slides_path, :icon => 'arrow-left' %>
+  <%= button_link_to t('spree_slider.back_to_slides'), spree.admin_slides_path, icon: 'arrow-left' %>
 <% end %>
 
-<%= render 'spree/shared/error_messages', :target => @slide %>
+<%= render 'spree/shared/error_messages', target: @slide %>
 
-<%= form_for [:admin, @slide] , :html => { :multipart => true } do |f| %>
+<%= form_for [:admin, @slide] , html: { multipart: true } do |f| %>
   <fieldset class="no-border-top">
-    <%= render :partial => 'form', :locals => { :f => f } %>
+    <%= render partial: 'form', locals: { f: f } %>
 
     <div class="clear"></div>
 
     <div data-hook="admin_shipping_method_new_form_buttons">
-      <%= render :partial => 'spree/admin/shared/new_resource_links' %>
+      <%= render partial: 'spree/admin/shared/new_resource_links' %>
     </div>
   </fieldset>
 <% end %>

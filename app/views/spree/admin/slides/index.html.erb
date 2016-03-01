@@ -1,5 +1,5 @@
 <% content_for :page_actions do %>
-  <%= button_link_to t('spree_slider.new_slide'), new_object_url, { :class => 'btn-success', :icon => 'add', :id => 'admin_new_slide_link' } %>
+  <%= button_link_to t('spree_slider.new_slide'), new_object_url, { class: 'btn-success', icon: 'add', id: 'admin_new_slide_link' } %>
 <% end %>
 
 <% content_for :page_title do %>
@@ -27,9 +27,9 @@
       <td class="align-center"><%= link_to slide.product.name, object_url(slide) unless slide.product_id.blank? %></td>
       <td class="align-center"><%= slide.published ? Spree.t(:say_yes) : Spree.t(:say_no) %></td>
       <td data-hook="admin_slides_index_row_actions" class="actions">
-        <%= link_to_edit slide, :no_text => true, :class => 'edit' %>
+        <%= link_to_edit slide, no_text: true, class: 'edit' %>
         &nbsp;
-        <%= link_to_delete slide, :no_text => true %>
+        <%= link_to_delete slide, no_text: true %>
       </td>
     </tr>
   <% end %>

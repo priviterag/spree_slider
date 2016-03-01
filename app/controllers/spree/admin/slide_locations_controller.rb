@@ -6,7 +6,6 @@ module Spree
       def index
         @slide_locations = Spree::SlideLocation.order(:name)
       end
-
     end
   end
 end

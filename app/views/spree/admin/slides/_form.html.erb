@@ -2,7 +2,7 @@
   <div class="col-md-2">
     <%= f.field_container :position do %>
       <%= f.label :position, t(:position) %>
-      <%= f.number_field :position, :class => 'fullwidth form-control' %>
+      <%= f.number_field :position, class: 'fullwidth form-control' %>
     <% end %>
   </div>
 
@@ -18,21 +18,21 @@
   <div class="col-md-12">
     <%= f.field_container :product_id do %>
       <%= label_tag :product_id, t(:product) %><br>
-      <%= hidden_field_tag 'slide[product_id]', f.object.product_id.to_s, :class => "product_picker fullwidth" %>
+      <%= hidden_field_tag 'slide[product_id]', f.object.product_id.to_s, class: "product_picker fullwidth" %>
     <% end %>
   </div>
 
   <div class="col-md-6">
     <%= f.field_container :name do %>
       <%= f.label :name, t(:name) %><br>
-      <%= f.text_field :name, :class => 'fullwidth form-control', :placeholder => t('spree_slider.placeholder_name') %>
+      <%= f.text_field :name, class: 'fullwidth form-control', placeholder: t('spree_slider.placeholder_name') %>
     <% end %>
   </div>
 
   <div class="col-md-6">
     <%= f.field_container :link_url do %>
       <%= f.label :link_url, t(:link_url) %><br>
-      <%= f.text_field :link_url, :class => 'fullwidth form-control', :placeholder => t('spree_slider.placeholder_link_url') %>
+      <%= f.text_field :link_url, class: 'fullwidth form-control', placeholder: t('spree_slider.placeholder_link_url') %>
     <% end %>
   </div>
 
@@ -43,7 +43,7 @@
   <div class="col-md-12">
     <%= f.field_container :body do %>
       <%= f.label :body, t(:body) %><br>
-      <%= f.text_area :body, {:cols => 60, :rows => 4, :class => 'fullwidth form-control'} %>
+      <%= f.text_area :body, {cols: 60, rows: 4, class: 'fullwidth form-control'} %>
     <% end %>
   </div>
 
