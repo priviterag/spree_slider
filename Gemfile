@@ -15,6 +15,6 @@ group :test do
   end
 end
 
-gem 'spree', '~> 3.0'
+gem 'spree', github: 'spree/spree', branch: '3-1-stable'
 
 gemspec
