@@ -5,16 +5,17 @@ ru:
   body: "Содержимое"
   link_url: "URL для ссылки"
   image: "Изображение"
+  preview: "Предпросмотр"
   image_file_name: "Имя файла изображения"
   published: "Опубликован"
   position: "Позиция"
   y: "Да"
   n: "Нет"
-  
+
   activerecord:
     models:
       spree/slide: "Слайд"
-      
+
   spree_slider:
     config_name: "Слайды"
     config_description: "Работа со слайдами"
@@ -24,4 +25,12 @@ ru:
     back_to_slides: "Назад к Слайдам"
     placeholder_name: "Оставьте пустым, чтобы использовать название выбранного продукта"
     placeholder_link_url: "Оставьте пустым, чтобы использовать url продукта"
-    image_tip: "Изображение продукта"  
+    image_tip: "Изображение продукта"
+
+  spree_slider_locations:
+    config_name: "Расположения Слайдов"
+    config_description: "Работа с расположениями слайдов"
+    title: "Расположения Слайдов"
+    new_location: "Новое Расположение Слайда"
+    editing_location: "Редактирование Расположения Слайдов"
+    back_to_locations: "Назад к Расположениям Слайдов"
