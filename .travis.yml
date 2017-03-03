@@ -13,8 +13,7 @@ gemfile:
   - gemfiles/spree_master.gemfile
 
 script:
-  - bundle exec rake test_app
-  - bundle exec rake spec
+  - bundle exec rspec spec
 
 rvm:
   - 2.3.1
