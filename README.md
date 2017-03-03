@@ -5,6 +5,15 @@ Add a slider to the homepage of your Spree site, and manage the slideshow from w
 ## Installation
 
 1. Add this extension to your Gemfile with this line:
+
+  #### Spree >= 3.1
+
+  ```ruby
+  gem 'spree_slider', github: 'spree-contrib/spree_slider'
+  ```
+
+  #### Spree 3.0 and Spree 2.x
+
   ```ruby
   gem 'spree_slider', github: 'spree-contrib/spree_slider', branch: 'X-X-stable'
   ```
