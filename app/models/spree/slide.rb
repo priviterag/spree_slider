@@ -13,7 +13,7 @@ class Spree::Slide < ActiveRecord::Base
   scope :published, -> { where(published: true).order('position ASC') }
   scope :location, -> (location) { joins(:slide_locations).where('spree_slide_locations.name = ?', location) }
 
-  belongs_to :product, touch: true
+  belongs_to :product, touch: true, optional: true
 
   def initialize(attrs = nil)
     attrs ||= { published: true }
